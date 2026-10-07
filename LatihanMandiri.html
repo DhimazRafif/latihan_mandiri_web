@@ -5,16 +5,26 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="nama">Dhimaz Rafif Hanafi</h1>
-    </header>
+    <div class="sticky-container">
+      <header class="header">
+        <h1 class="nama">Dhimaz Rafif Hanafi</h1>
+      </header>
 
-    <nav class="navbar">
-      <a href="#tentangsaya">Tentang</a>
-      <a href="">Jadwal</a>
-      <a href="">Kontak</a>
-      <a href="https://github.com/DhimazRafif" target="_blank">Github</a>
-    </nav>
+      <nav class="navbar">
+        <input type="checkbox" id="togle-menu" class="menu-checkbox" />
+
+        <label for="togle-menu" class="menu-icon"> &#9776; </label>
+
+        <ul class="nav-links">
+          <li><a href="#tentangsaya">Tentang</a></li>
+          <li><a href="">Jadwal</a></li>
+          <li><a href="">Kontak</a></li>
+          <li>
+            <a href="https://github.com/DhimazRafif" target="_blank">Github</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <main>
       <section id="hero" class="hero-section">

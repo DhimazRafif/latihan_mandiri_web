@@ -13,33 +13,80 @@
 .nama {
   margin: 0;
   font-size: 20px;
-  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .navbar {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-end;
   font-size: 15px;
+  font-weight: 300;
   background-color: rgb(255, 97, 97);
   padding: 5px 15px;
 }
 
-@media (max-width: 576px) {
-  .navbar {
-    flex-direction: column;
-    align-items: stretch;
-  }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar a {
+.nav-links a {
   color: darkblue;
   text-decoration: none;
-  margin-right: 15px;
   font-size: 15px;
+  font-family: sans-serif;
 }
 
-.navbar a:hover {
+.menu-checkbox,
+.menu-icon {
+  display: none;
+}
+
+.nav-links a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+
+  .menu-checkbox:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 main {
@@ -51,6 +98,7 @@ main {
   align-items: flex-start;
   gap: 20px;
   margin-bottom: 30px;
+  font-family: sans-serif;
 }
 
 .hero-title {
@@ -59,16 +107,12 @@ main {
   margin-bottom: 25px;
 }
 
-.hero-content h2 {
-  margin-top: 0;
-}
-
 table {
   border-collapse: collapse;
 }
 
 .hero-image .profile-image {
-  width: 250px;
+  width: 350px;
   height: auto;
 }
 
